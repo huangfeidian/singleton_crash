@@ -22,7 +22,7 @@ void call_dyn_test(const std::string& lib_name, int load_flag)
 }
 int main()
 {
-    int flag = RTLD_LOCAL|RTLD_NOW;
+    int flag = RTLD_GLOBAL|RTLD_NOW;
     const auto& the_one = singleton_test::instance();
     call_dyn_test("./libdyn_test_1.so", flag);
     call_dyn_test("./libdyn_test_2.so", flag);

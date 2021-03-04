@@ -1,6 +1,12 @@
 #pragma once
 
-extern int global_var;
+struct raii_test
+{
+    int i = 0;
+    raii_test();
+    ~raii_test();
+};
+extern raii_test global_var;
 class singleton_test
 {
     singleton_test();

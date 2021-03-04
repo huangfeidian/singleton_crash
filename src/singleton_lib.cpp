@@ -2,7 +2,16 @@
 
 #include <iostream>
 
-int global_var  = 1314;
+raii_test::raii_test()
+{
+    std::cout<<"raii_test ctor at "<<this<<std::endl;
+}
+raii_test::~raii_test()
+{
+    std::cout<<"raii_test dtor at "<<this<<std::endl;
+}
+
+raii_test global_var;
 singleton_test::singleton_test()
 {
     std::cout<<"singleton_test create at "<<this<<std::endl;
