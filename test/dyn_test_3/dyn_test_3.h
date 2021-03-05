@@ -1,0 +1,1 @@
+void dyn_test_3();

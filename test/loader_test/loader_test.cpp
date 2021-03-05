@@ -1,6 +1,7 @@
 #include <iostream>
 #include <dlfcn.h>
 #include "singleton_lib.h"
+#include "../dyn_test_3/dyn_test_3.h"
 
 void call_dyn_test(const std::string& lib_name, int load_flag)
 {
@@ -24,6 +25,7 @@ int main()
 {
     int flag = RTLD_GLOBAL|RTLD_NOW;
     const auto& the_one = singleton_test::instance();
+    dyn_test_3();
     call_dyn_test("./libdyn_test_1.so", flag);
     call_dyn_test("./libdyn_test_2.so", flag);
     return 1;
